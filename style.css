@@ -1,0 +1,803 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root{
+    --primary: #ffa200;
+}
+
+body{
+    background: black;
+    color: white;
+}
+
+body.no-scroll{
+    overflow: hidden;
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5em;
+}
+
+header{
+    border-bottom: 1px solid rgb(68, 68, 68);
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2em 0em;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    gap: .5em;
+}
+
+.logo h1{
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1em;
+}
+
+.logo div{
+    width: 35px;
+    height: 50px;
+    border: 4.5px solid var(--primary);
+}
+
+.burger{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .35em;
+    cursor: pointer;
+    z-index: 999;
+}
+
+.toggle .line1{
+    transform: translateY(8.7px) rotate(135deg);
+    background: black;
+}
+
+.toggle .line2{
+    opacity: 0;
+}
+
+.toggle .line3{
+    transform: translateY(-7px) rotate(-135deg);
+    background: black;
+}
+
+.line1, .line2, .line3{
+    width: 2em;
+    height: 2.5px;
+    background: white;
+    border-radius: 1em;
+    transition: .4s;
+}
+
+.line2{
+    width: 1.4em;
+}
+
+nav{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    background: rgb(231, 231, 231);
+    gap: 6em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    clip-path: circle(100px at 100% -15%);
+    -webkit-clip-path: circle(100px at 100% -15%);
+    transition: ease-in .6s;
+}
+
+.open-nav{
+    clip-path: circle(2000px at 100% -15%);
+    -webkit-clip-path: circle(2000px at 100% -15%);
+}
+
+nav ul .green{
+    width: 230px;
+    height: 230px;
+    position: absolute;
+    border-radius: 50%;
+    background: var(--primary);
+    filter: blur(5em);
+    top: 10%;
+    left: 0;
+    pointer-events: none;
+}
+
+.orange{
+    width: 230px;
+    height: 230px;
+    position: absolute;
+    border-radius: 50%;
+    background: orangered;
+    filter: blur(5em);
+    top: 30%;
+    left: 7%;
+    pointer-events: none;
+}
+
+.yellow{
+    width: 230px;
+    height: 230px;
+    position: absolute;
+    border-radius: 50%;
+    background: yellow;
+    filter: blur(5em);
+    top: 50%;
+    left: 0%;
+    pointer-events: none;
+}
+
+.nav-logo{
+    margin-right: 6em;
+    display: flex;
+    gap: 1em;
+}
+
+.nav-logo h1{
+    font-size: 3.5rem;
+    color: black;
+    font-weight: 400;
+    line-height: .8em;
+}
+
+.nav-logo div{
+    width: 58px;
+    height: 90px;
+    border: 8px solid var(--primary);
+}
+
+ul{
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    list-style: none;
+    text-align: center;
+    z-index: 999;
+}
+
+ul li a{
+    text-decoration: none;
+    color: black;
+    font-size: 1.3rem;
+    font-weight: 300;
+    z-index: 999;
+}
+
+.hero{
+    margin-top: 4em;
+}
+
+.hero-sec{
+    display: flex;
+    width: 100%;
+    gap: 2em;
+}
+
+.hero-img{
+    width: 70%;
+}
+
+.hero-img img{
+    width: 100%;
+}
+
+.hero-contents{
+    width: 28%;
+    padding: 2.5em 2em;
+    border: 4px solid var(--primary);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.hero-contents h1{
+    font-size: 2.7rem;
+    font-weight: 300;
+    line-height: 1.2em;
+}
+
+.hero-contents p{
+    font-weight: 200;
+}
+
+.button button{
+    padding: .6em 2em;
+    font-size: 1.1rem;
+    font-weight: 200;
+    background: none;
+    border: 1px solid white;
+    color: white;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.button button:hover{
+    background: white;
+    color: black;
+}
+
+p.photo{
+    font-weight: 200;
+    font-size: .9rem;
+    font-style: italic;
+}
+
+section.second{
+    margin: 8em 0 9em;
+}
+
+.second-sec{
+    display: flex;
+    align-items: center;
+    gap: 4em;
+}
+
+.second-sec-icon{
+    padding: 3em 2em;
+    border: 5px solid var(--primary);
+    line-height: 3.2em;
+}
+
+.second-sec-icon h1{
+    font-size: 2.9rem;
+    font-weight: 500;
+}
+
+.second-sec-icon h2{
+    font-size: 2.8rem;
+    font-weight: 200;
+}
+
+.second-sec-content h2{
+    font-size: 2.1rem;
+    font-weight: 300;
+    line-height: 1.2em;
+}
+
+.second-sec-content p{
+    font-weight: 200;
+    margin: 1em 0;
+}
+
+button.read-button{
+    background: none;
+    color: white;
+    border: none;
+    position: relative;
+    cursor: pointer;
+    transition: .3s;
+}
+
+button.read-button::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: var(--primary);
+    left: 0;
+    bottom: -10%;
+}
+
+button.read-button:hover{
+    color: var(--primary);
+}
+
+.third{
+    background: linear-gradient(0deg, #0000003d, #0000003d), url(./images/aurora-borealis-landscape-sea.jpeg);
+    background-size: cover;
+    background-position: center;
+    height: 37em;
+    position: relative;
+}
+
+.third-sec{
+    position: absolute;
+    width: 26em;
+    height: 22em;
+    padding: 1.2em;
+    background: var(--primary);
+    right: 10%;
+    top: -18%;
+}
+
+.third-sec-content{
+    background: black;
+    padding: 3em 2em;
+}
+
+.third-sec-content h2{
+    font-weight: 300;
+    position: relative;
+    padding-bottom: .5em;
+}
+
+.third-sec-content h2::after{
+    content: '';
+    position: absolute;
+    width: 20%;
+    height: 2px;
+    background: var(--primary);
+    left: 0;
+    bottom: 0%;
+}
+
+.third-sec-content p{
+    font-size: .9rem;
+    font-style: italic;
+    font-weight: 200;
+    margin: 1em 0;
+}
+
+section.fourth{
+    margin: 5em 0;
+}
+
+.fourth-sec{
+    text-align: center;
+}
+
+.fourth-sec h1{
+    font-size: 3rem;
+    font-weight: 300;
+    position: relative;
+}
+
+.fourth-sec h1::after{
+    content: '';
+    position: absolute;
+    width: 10%;
+    height: 2px;
+    background: var(--primary);
+    left: 50%;
+    bottom: -10%;
+    transform: translate(-50%, 10%);
+}
+
+.fourth-sec p{
+    margin-top: 1.5em;
+    font-weight: 200;
+}
+
+.fourth-sec-images{
+    margin-top: 4em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.f-row{
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+}
+
+.f-row img{
+    width: 30%;
+    object-fit: cover;
+}
+
+.s-row{
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+}
+
+.s1-column{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.s1-column img{
+    width: 100%;
+    height: 30em;
+    object-fit: cover;
+}
+
+.s2-column{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    height: 100%;
+}
+
+.s2-column img{
+    width: 100%;
+    height: 19.7em;
+    object-fit: cover;
+}
+
+.s3-column{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.s3-column img{
+    width: 100%;
+    height: 30em;
+    object-fit: cover;
+}
+
+.fourth-sec button{
+    margin-top: 3em;
+    padding: .6em 2em;
+    font-size: 1.1rem;
+    font-weight: 200;
+    background: none;
+    border: 2px solid var(--primary);
+    color: white;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.fourth-sec button:hover{
+    background: var(--primary);
+}
+
+section.fifth{
+    margin: 6em 0;
+}
+
+.fifth-sec{
+    display: flex;
+    gap: 3em;
+    align-items: center;
+    justify-content: center;
+}
+
+.fifth-sec-img{
+    width: 29em;
+    height: 30em;
+    border: 3px solid var(--primary);
+    position: relative;
+}
+
+.fifth-sec-img div{
+    position: absolute;
+    width: 40em;
+    background: url(./images/breathtaking-sunset-colorful-sky-desert-tsavo-west-kenya-kilimanjaro.jpeg);
+    background-size: cover;
+    background-position: center;
+    height: 23em;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -999;
+}
+
+.fifth-sec-content{
+    width: 25em;
+    border: 1.5px solid var(--primary);
+    padding: 5em 4em;
+    position: relative;
+}
+
+.fifth-sec-content::after{
+    content: '';
+    position: absolute;
+    width: 2em;
+    height: 2em;
+    border-right: 8px solid var(--primary);
+    border-top: 8px solid var(--primary);
+    top: -6%;
+    right: -5%;
+}
+
+.fifth-sec-content::before{
+    content: '';
+    position: absolute;
+    width: 2em;
+    height: 2em;
+    border-left: 8px solid var(--primary);
+    border-bottom: 8px solid var(--primary);
+    bottom: -7%;
+    left: -5%;
+}
+
+.fifth-sec-content h2{
+    font-size: 1.8rem;
+    font-weight: 300;
+}
+
+.fifth-sec-content p{
+    font-size: .9rem;
+    font-weight: 200;
+    margin: 1.5em 0;
+}
+
+section.sixth{
+    background: linear-gradient(0deg, #0000009f, #0000009f), url(./images/beautiful-aerial-shot-waterfall-surrounded-by-hill-sunset.jpeg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: -999;
+    margin: 7em 0 7em;
+}
+
+.sixth-sec{
+    padding: 6em 0;
+    z-index: 999;
+}
+
+.sixth-sec h1{
+    font-size: 2rem;
+    font-weight: 300;
+    position: relative;
+}
+
+.sixth-sec h1::after{
+    content: '';
+    position: absolute;
+    width: 10%;
+    height: 2px;
+    background: var(--primary);
+    left: 0%;
+    bottom: -10%;
+}
+
+.sixth-sec p.sixth-sec-head{
+    margin: 2em 0;
+    font-weight: 200;
+    width: 50%;
+}
+
+.sixth-sec-content{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 2em;
+}
+
+.sixth-sec-content h2{
+    font-size: 6rem;
+    font-weight: 600;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.sixth h2.last{
+    font-size: 31rem;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background: url(./images/beautiful-aerial-shot-waterfall-surrounded-by-hill-sunset.jpeg);
+    background-size: cover;
+    background-position: center;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    display: flex;
+    justify-content: end;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.seventh{
+    margin-top: 12em;
+}
+
+.seventh-sec{
+    display: flex;
+    gap: 1em;
+}
+
+.seventh-sec-content{
+    width: 38%;
+    padding: 4em 3em;
+    position: relative;
+}
+
+.seventh-sec-content::after{
+    content: '';
+    width: 50em;
+    height: 100%;
+    position: absolute;
+    border: 1px solid var(--primary);
+    top: 0;
+    left: 0;
+}
+
+.seventh-sec-content h2{
+    font-size: 2rem;
+    font-weight: 300;
+}
+
+.seventh-sec-content p{
+    font-size: 1rem;
+    font-weight: 200;
+    margin: 2em 0;
+}
+
+.seventh-sec-img{
+    width: 65%;
+    position: relative;
+}
+
+.seventh-sec-img::after{
+    content: '';
+    position: absolute;
+    width: 95%;
+    height: 100%;
+    border: 5px solid var(--primary);
+    left: -2%;
+    top: -12%;
+    background: black;
+}
+
+.seventh-sec-img img{
+    position: absolute;
+    width: 95%;
+    top: -24%;
+    right: 0%;
+    z-index: 999;
+}
+
+.seventh-sec-img::before{
+    content: '';
+    position: absolute;
+    width: 2em;
+    height: 2em;
+    border-right: 8px solid var(--primary);
+    border-bottom: 8px solid var(--primary);
+    bottom: 0%;
+    right: 0%;
+}
+
+p.t-photo{
+    font-weight: 200;
+    font-size: .9rem;
+    margin-top: 1em;
+    font-style: italic;
+}
+
+.eight{
+    margin: 10em 0;
+}
+
+.eight-sec{
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+.eight-cont{
+    display: flex;
+    align-items: center;
+    gap: 9em;
+    width: 75%;
+    margin: 0 auto;
+}
+
+.eight-cont img{
+    width: 10em;
+    height: 10em;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.eight-cont p{
+    font-size: .8em;
+    font-weight: 200;
+}
+
+.eight-cont h2{
+    margin-top: .3em;
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+.ninth-sec{
+    display: flex;
+    gap: 3em;
+}
+
+.ninth-content, .ninth-cont{
+    display: flex;
+    align-items: center;
+    gap: 2em;
+    width: 50%;
+}
+
+.ninth-content h1{
+    width: 50%;
+    padding: 1.5em 2em;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 300;
+    border: 2px solid var(--primary);
+}
+
+.ninth-content p{
+    width: 50%;
+    font-weight: 200;
+    font-size: .9rem;
+}
+
+.ninth-cont input{
+    width: 70%;
+    padding: .5em 1em;
+    font-size: 1.1rem;
+    outline: none;
+    border: none;
+}
+
+.ninth-cont input::placeholder{
+    font-weight: 200;
+    font-size: 1rem;
+}
+
+.ninth-cont button{
+    width: 30%;
+    padding: .5em 1em;
+    font-weight: 200;
+    border: 2px solid var(--primary);
+    background: none;
+    color: white;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.ninth-cont button:hover{
+    background: var(--primary);
+}
+
+footer{
+    background: linear-gradient(0deg, #0000009f, #0000009f), url(./images/catching-the-sun-at-sunset-4k-u7.jpg);
+    background-size: cover;
+    background-position: center;
+    padding-top: 3em;
+    margin-top: 5em;
+}
+
+footer .logo div{
+    width: 40px;
+    height: 56px;
+}
+
+footer .logo h1{
+    font-size: 1.4rem;
+}
+
+.footer-contents{
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+    padding: 4em 2em;
+    border-bottom: 2px solid grey;
+}
+
+.socials i{
+    font-size: 1.8rem;
+    color: var(--primary);
+}
+
+footer p{
+    font-size: .9rem;
+    text-align: center;
+    font-weight: 200;
+    padding: 7em 0 3em;
+}
